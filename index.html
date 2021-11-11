@@ -4,121 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <title>My plugin</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-            
-    <title>SquarePlug</title>
-
-     <style>
-          *{
-            justify-content: center;
-            text-align: center;
-            margin-top: auto;
-           
-
-            }
-
-            body{
-              background-image: url("./img/antoine-dautry-05A-kdOH6Hw-unsplash.jpg");
-            background-repeat:no-repeat ;
-            background-position: center center ;
-            background-size: cover;
-
-
-            }
-          h2{
-            text-decoration: dashed;
-            font-family: 'Courier New', Courier, monospace;
-            font-weight: 100px;
-            font-variant: normal;
-            font-style: oblique;
-            margin:0 auto;
-            color:black ;
-
-          }
-          .mainDiv {
-            justify-content: center;
-            text-align: center;
-            margin:  auto;
-            width: 800px;
-            margin-top: 150px;
-             
-          }
-          
-            button {
-            background-color: #dddafa;
-            width: 100px;
-            height: 30px;
-            border-radius: 8px;
-            box-shadow: 0px -1px 3px 4px #d1cfe7,
-              0px -1px 2px 4px #291ab4;
-          }
-          button:hover {
-            background-color: seashell;
-            transform: translateY(-5px);
-            box-shadow: none;
-          }
-            .card-content{
-              background-image: url("img/antoine-dautry-05A-kdOH6Hw-unsplash.jpg");
-              background-repeat:no-repeat ;
-            background-position: center center ;
-            background-size: cover;
-
-            }
-           input:placeholder{
-              color: black;
-            }
-            
-
-        </style>
-  
 </head>
 <body>
-    <div class="row">
-        <div class="mainDiv">
-          <div class="card">
-            
-            <div class="card-image">
-              <span class="card-title"><h2>Enter the number to find square</h2></span>
-            </div>
-            <div class="card-content">
-              
-                <div id="box">
-              
-               <input type="text" id="number" placeholder="Enter number to find a square" /><br/></br>
-               <button id="submitButton">Get square</button> 
-               </div></p>
-            </div>
-           
+<div class="center">
+    <h3 class="white-text">Demo plugin</h3><hr>
+    <h4 class="white-text">This is Demo Plugin To Display Your square</h4>
+</div>
+  <div class="center">
+    <div class="col s12 m6">
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
+          <span class="card-title">Enter your Number</span>
+          <div class="input-field col s6">
+            <input placeholder="Enter your name" id="first_name" type="text" class="validate">
+            <label for="first_name"></label>
+            <div id="output">Your Number is:</div>
+            <a class="waves-effect waves-light btn-small btn-click">Click me</a>  
           </div>
         </div>
       </div>
-
-       
-
-    <!-- <h2>Enter the number to find square of a number</h2>
-     <div id="box">
-     <h1>Enter number:</h1>
-    <input type="text" id="number" placeholder="Enter number to find a square" /><br/></br>
-    <button id="submitButton">Get square</button>  -->
+      <div class="center">
+        <h5 class="white-text">This website is develope by anita at<br/><h6><a href="https://ceryxdigital.com"><h6 id="id">Ceryxdigital</h6></a></h6></h5><br>
+        <h5 class="white-text">If any queries send us email <h6 class="white-text">anita@ceryxdigital</h6></h5>
+    </div> 
     </div>
-        <script>
-
-             $(document).ready(function(){
-                 $("#submitButton").click(function(){
-                    let square= $("#number").square();
-                    console.log(+square);
-                    document.write(+square);
-                     }) ;
-               
-             });
-        
-        </script> 
-        <script src="./jquery.square.js"></script>
-        
     
+  </div>
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>          
 </body>
+<script src="./demo.js"></script>
+<script>
+    $(document).ready(function(){
+        $("a").click(function(){  
+           let name=$("#first_name").square();
+           $("#output").html(name);
+        });
+    });
+</script>
 </html>

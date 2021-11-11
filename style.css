@@ -1,0 +1,27 @@
+body{
+    background-color: #7986cb;
+}
+.center{
+    height: 200px;
+    width: 600px;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+       
+}
+h4 {
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    font-family: 'Courier New', Courier, monospace;
+}
+h5{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 100;
+}
+h3{
+    font-family: 'Courier New', Courier, monospace;
+}
+#id{
+    color: black;
+}
